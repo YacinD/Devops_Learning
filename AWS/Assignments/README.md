@@ -98,6 +98,7 @@ SSH is not open to the world. It never should be. Port 22 is locked to a single 
 | # | Screenshot |
 |---|-----------|
 | 1 | VPC details — `Project-VPC` CIDR, DNS config |
+![VPC Architecture](Project 1 - VPC.png)
 | 2 | Subnets — Public and Private, AZ placement, CIDR ranges |
 | 3 | NAT Gateway — Elastic IP, public subnet placement, active state |
 | 4 | Internet Gateway — attached to `Project-VPC` |
