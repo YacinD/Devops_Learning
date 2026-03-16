@@ -95,15 +95,48 @@ SSH is not open to the world. It never should be. Port 22 is locked to a single 
 
 ## Evidence
 
-| # | Screenshot |
-|---|-----------|
-| 1 | VPC details — `Project-VPC` CIDR, DNS config |
-![VPC Architecture](Project 1 - VPC.png)
-| 2 | Subnets — Public and Private, AZ placement, CIDR ranges |
-| 3 | NAT Gateway — Elastic IP, public subnet placement, active state |
-| 4 | Internet Gateway — attached to `Project-VPC` |
-| 5 | EC2 instances — Public (with IP) vs Private (no public IP) |
-| 6 | Security Group rules — `Project-Public-SG` inbound/outbound |
+## 📸 Evidence
+
+### VPC Details
+> `Project-VPC` — `vpc-0900fb6efc2fee01d` | CIDR `10.0.0.0/16`
+
+![VPC Details](Project 1 - VPC.png)
+
+---
+
+### Subnets
+> Public (`10.0.0.0/24`) and Private (`10.0.1.0/24`) subnets within `Project-VPC`
+
+![Subnets](screenshots/subnets.png)
+
+---
+
+### NAT Gateway
+> Deployed in the public subnet with an Elastic IP — handles outbound traffic for the private subnet
+
+![NAT Gateway](screenshots/nat-gateway.png)
+
+---
+
+### Internet Gateway
+> Attached to `Project-VPC` — enables two-way internet access for the public subnet
+
+![Internet Gateway](screenshots/igw.png)
+
+---
+
+### EC2 Instances
+> `Project-Public-EC2` (public IP assigned) vs `Project-Private-EC2` (no public IP)
+
+![Public EC2](screenshots/ec2-public.png)
+![Private EC2](screenshots/ec2-private.png)
+
+---
+
+### Security Group
+> `Project-Public-SG` — least privilege inbound rules (SSH scoped to My IP, HTTP open)
+
+![Security Group](screenshots/sg.png)
 
 ---
 
