@@ -100,7 +100,7 @@ SSH is not open to the world. It never should be. Port 22 is locked to a single 
 ### VPC Details
 > `Project-VPC` — `vpc-0900fb6efc2fee01d` | CIDR `10.0.0.0/16`
 
-![VPC Details](Project 1 - VPC.png)
+![VPC Details](project-1-vpc.png)
 
 ---
 
